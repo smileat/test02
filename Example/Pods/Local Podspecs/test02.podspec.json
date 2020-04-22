@@ -1,0 +1,22 @@
+{
+  "name": "test02",
+  "version": "0.1.0",
+  "summary": "A short description of test02.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://www.baidu.com",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "smileat": "zshan@chint.com"
+  },
+  "source": {
+    "git": "http://10.10.101.123/chint-it-app/test01.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "test02/Classes/**/*"
+}
