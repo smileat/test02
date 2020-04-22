@@ -1,5 +1,5 @@
 PODS:
-  - test02 (0.1.0)
+  - test02 (0.1.5)
 
 DEPENDENCIES:
   - test02 (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  test02: 0cd4f8a4720921ca22c4bcc1f33abd43425b1e9d
+  test02: 298fcee49a88ff5c9e008896cb5d3e5c6addf939
 
 PODFILE CHECKSUM: d7226af8a4dcf67171677021bcfda59558afee94
 
