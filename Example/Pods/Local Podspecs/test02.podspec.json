@@ -27,7 +27,7 @@
   "subspecs": [
     {
       "name": "Masonry",
-      "source_files": "test02/Classes/ZSHWSVoice/Masonry/*.{h,m,swift}"
+      "source_files": "test02/test02/Masonry/*.{h,m,swift}"
     }
   ]
 }
