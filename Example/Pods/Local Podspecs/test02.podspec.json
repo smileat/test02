@@ -23,11 +23,5 @@
     "test02": [
       "test02/Assets/*.png"
     ]
-  },
-  "subspecs": [
-    {
-      "name": "Masonry",
-      "source_files": "test02/test02/Masonry/*.{h,m,swift}"
-    }
-  ]
+  }
 }

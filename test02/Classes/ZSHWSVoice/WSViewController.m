@@ -51,10 +51,11 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
     __weak typeof(self) weakSelf = self;
     [self.hud hideAnimated:YES];
     self.hud.completionBlock = ^{
-        [SVProgressHUD showSuccessWithStatus:@"连接成功"];
-        [SVProgressHUD dismissWithDelay:0.7 completion:^{
-            [weakSelf initHeartBeat];
-        }];
+//        [SVProgressHUD showSuccessWithStatus:@"连接成功"];
+//        [SVProgressHUD dismissWithDelay:0.7 completion:^{
+//
+//        }];
+        [weakSelf initHeartBeat];
     };
 }
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
@@ -65,7 +66,7 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 }
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean{
     if (![MBProgressHUD HUDForView:self.view]) {
-        [SVProgressHUD showWithStatus:@"断开连接"];
+//        [SVProgressHUD showWithStatus:@"断开连接"];
     }
     [self destoryHeartBeat];
 }
@@ -86,10 +87,10 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
         }];
     }else if (baseResult.type == REC_MSG_TYPE_EXCHANGE_SCREEN){
         if (baseResult.result == 0) {
-            [SVProgressHUD showErrorWithStatus:@"大屏切换失败，请选其他大屏"];
+//            [SVProgressHUD showErrorWithStatus:@"大屏切换失败，请选其他大屏"];
         }else{
             [self openAudioQueue];
-            [SVProgressHUD showSuccessWithStatus:@"大屏切换成功"];
+//            [SVProgressHUD showSuccessWithStatus:@"大屏切换成功"];
             [self.voiceWaveView showInParentView:self.voiceWaveParentView];
             [self.voiceWaveView startVoiceWave];
         }
@@ -143,17 +144,17 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 #pragma mark -- Aciton
 -(void)areaNameSelect{
     if (self.sysNameArr.count <= 0) {
-        [SVProgressHUD showInfoWithStatus:@"暂无数据"];
+//        [SVProgressHUD showInfoWithStatus:@"暂无数据"];
     }else{
         [self showPickerViewWithDataList:self.sysNameArr];
     }
 }
 -(void)screenNameSelect{
     if ([self.cellDataArr[1] isEqualToString:araeTip]) {
-        [SVProgressHUD showInfoWithStatus:@"请先选择系统"];
+//        [SVProgressHUD showInfoWithStatus:@"请先选择系统"];
     }else{
         if (self.screenNameArr.count <= 0) {
-            [SVProgressHUD showInfoWithStatus:@"该系统暂无在线大屏"];
+//            [SVProgressHUD showInfoWithStatus:@"该系统暂无在线大屏"];
         }else{
             [self showPickerViewWithDataList:self.screenNameArr];
         }
@@ -161,17 +162,17 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 }
 -(void)switchControlSelect:(UISwitch *)sw{
     if (self.socket.readyState == SR_CLOSED || self.socket.readyState == SR_CLOSING) {
-        [SVProgressHUD showErrorWithStatus:@"服务器连接失败"];
+//        [SVProgressHUD showErrorWithStatus:@"服务器连接失败"];
         [self resetCellDetailValue:@"0" index:0];
         return;
     }
     if (self.sysScreenItem == nil) {
-        [SVProgressHUD showInfoWithStatus:@"请选择系统"];
+//        [SVProgressHUD showInfoWithStatus:@"请选择系统"];
         [self resetCellDetailValue:@"0" index:0];
         return;
     }
     if (self.deviceClientItem == nil) {
-        [SVProgressHUD showInfoWithStatus:@"请选择大屏"];
+//        [SVProgressHUD showInfoWithStatus:@"请选择大屏"];
         [self resetCellDetailValue:@"0" index:0];
         return;
     }
@@ -182,7 +183,7 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
         AudioQueueDispose(_inputQueue, YES);
         [self.socket send:@"断开大屏"];
         [self.voiceWaveView stopVoiceWaveWithShowLoadingViewCallback:^{}];
-        [SVProgressHUD dismiss];
+//        [SVProgressHUD dismiss];
     }
 }
 - (void)startWebSocket{
@@ -214,7 +215,7 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 }
 -(void)replaceClientArrDataWithStatus:(CTWebSocketClientData *)clientData{
     if ([self.cellDataArr.lastObject isEqualToString:clientData.clientName]) {
-        [SVProgressHUD showErrorWithStatus:@"该大屏已下线，请选择其他大屏"];
+//        [SVProgressHUD showErrorWithStatus:@"该大屏已下线，请选择其他大屏"];
         [self resetCellDetailValue:screenTip index:2];
     }
     __typeof(self) __weak weakSelf = self;
@@ -267,7 +268,7 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
         [self.heatBeat invalidate];
         self.heatBeat = nil;
     }
-    [SVProgressHUD dismiss];
+//    [SVProgressHUD dismiss];
 }
 - (void)reConnect{
     if (self.reConnectCount >= 2) {
@@ -329,7 +330,7 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 #pragma mark -- pickerview
 -(void)showPickerViewWithDataList:(NSArray *)dataList{
     if (dataList.count == 0) {
-        [SVProgressHUD showErrorWithStatus:@"暂无数据可选"];
+//        [SVProgressHUD showErrorWithStatus:@"暂无数据可选"];
     }else{
         __typeof(self) __weak weakSelf = self;
         [ZJPickerView zj_showWithDataList:dataList propertyDict:[self getZJPickerpropertyDict] completion:^(NSString *selectContent) {
