@@ -18,5 +18,16 @@
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "test02/Classes/**/*"
+  "source_files": "test02/Classes/**/*",
+  "resource_bundles": {
+    "test02": [
+      "test02/Assets/*.png"
+    ]
+  },
+  "subspecs": [
+    {
+      "name": "Masonry",
+      "source_files": "test02/Classes/ZSHWSVoice/Masonry/*.{h,m,swift}"
+    }
+  ]
 }

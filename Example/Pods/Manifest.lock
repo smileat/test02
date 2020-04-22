@@ -1,5 +1,7 @@
 PODS:
-  - test02 (0.1.0)
+  - test02 (0.1.0):
+    - test02/Masonry (= 0.1.0)
+  - test02/Masonry (0.1.0)
 
 DEPENDENCIES:
   - test02 (from `../`)
@@ -9,7 +11,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  test02: 356bffbe1e404cb609aa6cda98dc85d913a046a5
+  test02: 0ccf15df991ccf7304cb1d8e57d6f1b2a55e4dfd
 
 PODFILE CHECKSUM: d7226af8a4dcf67171677021bcfda59558afee94
 
