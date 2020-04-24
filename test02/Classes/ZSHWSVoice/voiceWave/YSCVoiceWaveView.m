@@ -410,7 +410,10 @@ static NSRunLoop *_voiceWaveRunLoop;
 - (UIImageView *)firstLine
 {
     if (!_firstLine) {
-        self.firstLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"firstLine"]];
+        NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingPathComponent:@"/test02.bundle"];
+        NSBundle *resoureBundle = [NSBundle bundleWithPath:bundlePath];
+        UIImage *image = [UIImage imageNamed:@"firstLine" inBundle:resoureBundle compatibleWithTraitCollection:nil];
+        _firstLine = [[UIImageView alloc] initWithImage:image];
         _firstLine.layer.masksToBounds = YES;
     }
     
@@ -420,7 +423,10 @@ static NSRunLoop *_voiceWaveRunLoop;
 - (UIImageView *)secondLine
 {
     if (!_secondLine) {
-        self.secondLine = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"secondLine"]];
+        NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingPathComponent:@"/test02.bundle"];
+        NSBundle *resoureBundle = [NSBundle bundleWithPath:bundlePath];
+        UIImage *image = [UIImage imageNamed:@"secondLine" inBundle:resoureBundle compatibleWithTraitCollection:nil];
+        _secondLine = [[UIImageView alloc] initWithImage:image];
         _secondLine.layer.masksToBounds = YES;
         _secondLine.alpha = 0.6;
     }
@@ -431,7 +437,10 @@ static NSRunLoop *_voiceWaveRunLoop;
 - (UIImageView *)fillLayerImage
 {
     if (!_fillLayerImage) {
-        self.fillLayerImage = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"fill"]];
+        NSString *bundlePath = [[NSBundle bundleForClass:[self class]].resourcePath stringByAppendingPathComponent:@"/test02.bundle"];
+        NSBundle *resoureBundle = [NSBundle bundleWithPath:bundlePath];
+        UIImage *image = [UIImage imageNamed:@"firstLine" inBundle:resoureBundle compatibleWithTraitCollection:nil];
+        self.fillLayerImage = [[UIImageView alloc] initWithImage:image];
         _fillLayerImage.layer.masksToBounds = YES;
         _fillLayerImage.alpha = 0.2;
     }

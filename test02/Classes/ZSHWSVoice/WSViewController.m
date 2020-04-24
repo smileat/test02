@@ -43,6 +43,7 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 //    [self configureBDSDK];
     [self cancelationHUD];
     [self startWebSocket];
+    
 }
 
 #pragma mark -- SRWebSocketDelegate
@@ -60,9 +61,11 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 }
 - (void)webSocket:(SRWebSocket *)webSocket didFailWithError:(NSError *)error{
     NSLog(@"连接失败");
-    [webSocket close];
-    [self destoryHeartBeat];
-    [self reConnect];
+    [self.voiceWaveView showInParentView:self.voiceWaveParentView];
+    [self.voiceWaveView startVoiceWave];
+//    [webSocket close];
+//    [self destoryHeartBeat];
+//    [self reConnect];
 }
 - (void)webSocket:(SRWebSocket *)webSocket didCloseWithCode:(NSInteger)code reason:(NSString *)reason wasClean:(BOOL)wasClean{
     if (![MBProgressHUD HUDForView:self.view]) {
@@ -455,7 +458,8 @@ static NSString *const detailSwitchCellID = @"detailSwitchCellID";
 }
 - (YSCVoiceWaveView *)voiceWaveView{
     if (!_voiceWaveView) {
-        self.voiceWaveView = [[YSCVoiceWaveView alloc] init];
+        _voiceWaveView = [[YSCVoiceWaveView alloc] init];
+        _voiceWaveView.backgroundColor = [UIColor redColor];
     }
     return _voiceWaveView;
 }
