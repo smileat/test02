@@ -37,7 +37,7 @@ TODO: Add long description of the pod here.
     'test02' => ['test02/Assets/*.png']
   }
 
-#   s.public_header_files = 'Pod/**/*.h'
+#   s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation'
    #为了稳定性，采用固定版本
    s.dependency 'Masonry','1.1.0'
