@@ -1,6 +1,6 @@
 {
   "name": "test02",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "summary": "A short description of test02.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/smileat/test02",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/smileat/test02.git",
-    "tag": "0.1.5"
+    "tag": "0.1.6"
   },
   "platforms": {
     "ios": "8.0"
@@ -25,7 +25,6 @@
       "test02/Assets/*.png"
     ]
   },
-  "public_header_files": "Pod/**/*.h",
   "frameworks": [
     "UIKit",
     "Foundation",
@@ -33,13 +32,19 @@
   ],
   "dependencies": {
     "Masonry": [
-
+      "1.1.0"
     ],
     "MJExtension": [
-
+      "3.2.1"
     ],
     "MBProgressHUD": [
-
+      "1.2.0"
+    ],
+    "SVProgressHUD": [
+      "2.2.5"
+    ],
+    "SocketRocket": [
+      "0.5.1"
     ]
   }
 }

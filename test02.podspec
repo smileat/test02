@@ -37,9 +37,12 @@ TODO: Add long description of the pod here.
     'test02' => ['test02/Assets/*.png']
   }
 
-   s.public_header_files = 'Pod/**/*.h'
+#   s.public_header_files = 'Pod/**/*.h'
    s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation'
-   s.dependency 'Masonry'
-   s.dependency 'MJExtension'
-   s.dependency 'MBProgressHUD'
+   #为了稳定性，采用固定版本
+   s.dependency 'Masonry','1.1.0'
+   s.dependency 'MJExtension','3.2.1'
+   s.dependency 'MBProgressHUD','1.2.0'
+   s.dependency 'SVProgressHUD','2.2.5'
+   s.dependency 'SocketRocket','0.5.1'
 end

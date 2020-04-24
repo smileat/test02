@@ -14,4 +14,4 @@
 //   limitations under the License.
 //
 
-#import "SRWebSocket.h"
+#import <SocketRocket/SRWebSocket.h>
