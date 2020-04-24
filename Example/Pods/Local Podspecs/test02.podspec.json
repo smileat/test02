@@ -19,9 +19,27 @@
     "ios": "8.0"
   },
   "source_files": "test02/Classes/**/*",
+  "static_framework": true,
   "resource_bundles": {
     "test02": [
       "test02/Assets/*.png"
+    ]
+  },
+  "public_header_files": "Pod/**/*.h",
+  "frameworks": [
+    "UIKit",
+    "Foundation",
+    "CoreFoundation"
+  ],
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "MJExtension": [
+
+    ],
+    "MBProgressHUD": [
+
     ]
   }
 }

@@ -7,12 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MBProgressHUD.h"
+#import <MBProgressHUD/MBProgressHUD.h>
 //#import "SVProgressHUD.h"
 #import "SocketRocket.h"
 #import <AVFoundation/AVFoundation.h>
-#import "Masonry.h"
-#import "MJExtension.h"
+#import <Masonry/Masonry.h>
+#import <MJExtension/MJExtension.h>
 #import "ZJPickerView.h"
 //#import "BDSSpeechSynthesizer.h"
 #import "YSCVoiceWaveView.h"

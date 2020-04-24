@@ -26,17 +26,20 @@ TODO: Add long description of the pod here.
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'smileat' => 'zshan@chint.com' }
   s.source           = { :git => 'https://github.com/smileat/test02.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'test02/Classes/**/*'
-  
+  s.static_framework = true
+#  s.ios.vendored_frameworks = "Pod/**/*.framework"
+#  s.ios.vendored_libraries = "xxx/**/*.a”
   s.resource_bundles = {
     'test02' => ['test02/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+   s.public_header_files = 'Pod/**/*.h'
+   s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation'
+   s.dependency 'Masonry'
+   s.dependency 'MJExtension'
+   s.dependency 'MBProgressHUD'
 end
