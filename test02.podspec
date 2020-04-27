@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'test02'
-  s.version          = '0.2.8'
+  s.version          = '0.2.9'
   s.summary          = 'A short description of test02.'
 
 # This description is used to generate tags and improve search results.
@@ -29,22 +29,23 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'test02/Classes/**/*'
+  s.source_files = 'test02/Classes/WSViewController.{h,m}'
   s.static_framework = true
 #  s.ios.vendored_frameworks = "Pod/**/*.framework"
 #  s.ios.vendored_libraries = "xxx/**/*.a”
   s.resource_bundles = {
     'test02' => ['test02/Assets/*.png']
   }
-#  s.subspec 'model' do |ss|
-#      ss.source_files = 'Classes/model/*'
-#  end
-#  s.subspec 'view' do |ss|
-#      ss.source_files = 'Classes/view/*'
-#  end
+  s.subspec 'modelView' do |ss|
+      ss.source_files = 'test02/Classes/model/*','test02/Classes/view/*','test02/Classes/ZSHConst.h'
+  end
+  
   s.subspec 'ZJPickerView' do |ss|
       ss.source_files = 'test02/Classes/ZJPickerView.{h,m}'
-      ss.public_header_files = 'test02/Classes/ZJPickerView.h'
+  end
+  s.subspec 'voiceWave' do |ss|
+      ss.source_files = 'test02/Classes/voiceWave/*.{h,m}'
+      
   end
 #   s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation'

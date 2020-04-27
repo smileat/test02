@@ -1,6 +1,6 @@
 {
   "name": "test02",
-  "version": "0.2.8",
+  "version": "0.2.9",
   "summary": "A short description of test02.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/smileat/test02",
@@ -13,12 +13,12 @@
   },
   "source": {
     "git": "https://github.com/smileat/test02.git",
-    "tag": "0.2.8"
+    "tag": "0.2.9"
   },
   "platforms": {
     "ios": "8.0"
   },
-  "source_files": "test02/Classes/**/*",
+  "source_files": "test02/Classes/WSViewController.{h,m}",
   "static_framework": true,
   "resource_bundles": {
     "test02": [
@@ -49,9 +49,20 @@
   },
   "subspecs": [
     {
+      "name": "modelView",
+      "source_files": [
+        "test02/Classes/model/*",
+        "test02/Classes/view/*",
+        "test02/Classes/ZSHConst.h"
+      ]
+    },
+    {
       "name": "ZJPickerView",
-      "source_files": "test02/Classes/ZJPickerView.{h,m}",
-      "public_header_files": "test02/Classes/ZJPickerView.h"
+      "source_files": "test02/Classes/ZJPickerView.{h,m}"
+    },
+    {
+      "name": "voiceWave",
+      "source_files": "test02/Classes/voiceWave/*.{h,m}"
     }
   ]
 }
