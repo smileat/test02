@@ -4,7 +4,28 @@ PODS:
   - MJExtension (3.2.1)
   - SocketRocket (0.5.1)
   - SVProgressHUD (2.2.5)
-  - test02 (0.1.9):
+  - test02 (0.2.0):
+    - Masonry (= 1.1.0)
+    - MBProgressHUD (= 1.2.0)
+    - MJExtension (= 3.2.1)
+    - SocketRocket (= 0.5.1)
+    - SVProgressHUD (= 2.2.5)
+    - test02/model (= 0.2.0)
+    - test02/view (= 0.2.0)
+    - test02/ZJPickerView (= 0.2.0)
+  - test02/model (0.2.0):
+    - Masonry (= 1.1.0)
+    - MBProgressHUD (= 1.2.0)
+    - MJExtension (= 3.2.1)
+    - SocketRocket (= 0.5.1)
+    - SVProgressHUD (= 2.2.5)
+  - test02/view (0.2.0):
+    - Masonry (= 1.1.0)
+    - MBProgressHUD (= 1.2.0)
+    - MJExtension (= 3.2.1)
+    - SocketRocket (= 0.5.1)
+    - SVProgressHUD (= 2.2.5)
+  - test02/ZJPickerView (0.2.0):
     - Masonry (= 1.1.0)
     - MBProgressHUD (= 1.2.0)
     - MJExtension (= 3.2.1)
@@ -32,7 +53,7 @@ SPEC CHECKSUMS:
   MJExtension: 635f2c663dcb1bf76fa4b715b2570a5710aec545
   SocketRocket: d57c7159b83c3c6655745cd15302aa24b6bae531
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
-  test02: c393e7c01fa5ae0c9aba1b3e63d92faf078fa4ff
+  test02: d1d42864e4b3784af97e73216b75a7f5678093c7
 
 PODFILE CHECKSUM: d7226af8a4dcf67171677021bcfda59558afee94
 
