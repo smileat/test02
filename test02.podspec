@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'test02'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'A short description of test02.'
 
 # This description is used to generate tags and improve search results.
@@ -37,13 +37,13 @@ TODO: Add long description of the pod here.
     'test02' => ['test02/Assets/*.png']
   }
   s.subspec 'model' do |mo|
-      mo.source_files = 'test02/Classes/model/*.{h,m}'
+      mo.source_files = 'test02/Classes/model/**/*'
   end
   s.subspec 'view' do |vi|
-      vi.source_files = 'test02/Classes/view/*.{h,m}'
+      vi.source_files = 'test02/Classes/view/**/*'
   end
   s.subspec 'ZJPickerView' do |pv|
-      pv.source_files = 'test02/Classes/ZJPickerView/*.{h,m}'
+      pv.source_files = 'test02/Classes/ZJPickerView/**/*'
   end
 #   s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation'
