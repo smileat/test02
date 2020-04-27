@@ -22,6 +22,7 @@
 #import "WSViewController.h"
 #import "ZJPickerView.h"
 #import "ZSHConst.h"
+#import "ZJPickerView.h"
 
 FOUNDATION_EXPORT double test02VersionNumber;
 FOUNDATION_EXPORT const unsigned char test02VersionString[];
