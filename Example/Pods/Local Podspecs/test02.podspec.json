@@ -1,6 +1,6 @@
 {
   "name": "test02",
-  "version": "0.2.5",
+  "version": "0.2.7",
   "summary": "A short description of test02.",
   "description": "TODO: Add long description of the pod here.",
   "homepage": "https://github.com/smileat/test02",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/smileat/test02.git",
-    "tag": "0.2.5"
+    "tag": "0.2.7"
   },
   "platforms": {
     "ios": "8.0"
@@ -50,7 +50,8 @@
   "subspecs": [
     {
       "name": "ZJPickerView",
-      "source_files": "test02/Classes/ZJPickerView/ZJPickerView.{h,m}"
+      "source_files": "test02/Classes/ZJPickerView/ZJPickerView.{h,m}",
+      "public_header_files": "test02/Classes/ZJPickerView/ZJPickerView.h"
     }
   ]
 }
