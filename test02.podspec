@@ -43,7 +43,7 @@ TODO: Add long description of the pod here.
 #      ss.source_files = 'Classes/view/*'
 #  end
   s.subspec 'ZJPickerView' do |ss|
-      ss.source_files = 'test02/Classes/ZJPickerView.{h,m}'
+      ss.source_files = 'test02/Classes/ZJPickerView/ZJPickerView.{h,m}'
   end
 #   s.public_header_files = 'Pod/Classes/**/*.h'
    s.frameworks = 'UIKit', 'Foundation', 'CoreFoundation'
